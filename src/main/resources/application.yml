@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/shopping?useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: 123456
+mybatis-plus:
+  global-config:
+    db-config:
+#      auto代表当传入为null时 使用数据库默认配置
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    关闭驼峰匹配 否则匹配的时候加下划线
+    map-underscore-to-camel-case: false
